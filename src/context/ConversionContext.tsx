@@ -7,7 +7,7 @@ const ConversionContext = createContext<IConversionContextType | undefined>(
 const ConversionProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [currencies, setCurrencies] = useState<Record<string, ICurrency>>({});
+  const [currencies] = useState<Record<string, ICurrency>>({});
   const [history, setHistory] = useState<IConversion[]>(() => {
     const saved = localStorage.getItem("conversionHistory");
     return saved ? JSON.parse(saved) : [];
