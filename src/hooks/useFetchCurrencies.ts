@@ -11,7 +11,7 @@ const useFetchCurrencies = () => {
       try {
         const response = await fetch(API_URLS.CURRENCIES);
         const result = await response.json();
-        console.log({ result });
+ 
         setData(result.data);
       } catch (error) {
         console.error("Failed to fetch data:", error);
